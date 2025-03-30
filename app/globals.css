@@ -1,26 +1,145 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.blog-content {
+    padding: 36px 0;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Headings */
+.blog-content h1 {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.blog-content h2 {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.blog-content h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.blog-content h4 {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Paragraphs */
+.blog-content p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Bold & Italics */
+.blog-content b {
+    font-weight: 600;
+}
+
+.blog-content i {
+    font-style: italic;
+}
+
+/* Lists */
+.blog-content ul {
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+
+.blog-content ul li {
+    margin-bottom: 6px;
+    list-style-type: disc;
+}
+
+.blog-content ol {
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+
+.blog-content ol li {
+    margin-bottom: 6px;
+    list-style-type: decimal;
+}
+
+/* Blockquote */
+.blog-content blockquote {
+    margin: 12px 0;
+    padding: 10px 20px;
+    border-left: 4px solid #0073e6;
+    background: #f4f4f4;
+    font-style: italic;
+}
+
+/* Code Blocks */
+.blog-content pre {
+    background: #f8f8f8;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+}
+
+.blog-content code {
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+}
+
+/* Links */
+.blog-content a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.blog-content a:hover {
+    text-decoration: underline;
+}
+
+/* Images */
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 12px 0;
+    border-radius: 5px;
+}
+
+/* Tables */
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+.blog-content th,
+.blog-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.blog-content th {
+    background: #f4f4f4;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Horizontal Rule */
+.blog-content hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
 }
